@@ -15,7 +15,9 @@ client.on(Events.VoiceStateUpdate, (oldVoiceState, newVoiceState) => {
 			category.children.create({ name: `Vocal de ${newVoiceState.member.displayName}`, type: ChannelType.GuildVoice }).then(channel => {
 				newVoiceState.member.voice.setChannel(channel);
 			});
-		} else if (oldVoiceState.channel && oldVoiceState.channel.id !== refChannelId ) { // The member disconnected from a channel.
+		}
+
+		if (oldVoiceState.channel && (oldVoiceState.channel.id !== refChannelId || oldVoiceState.channel.name == `Vocal de ${oldVoiceState.channel.member.user.tag}`)) { // The member disconnected from a channel.
 			if (oldVoiceState.channel.members.size === 0)
 				oldVoiceState.channel.delete("Deleted temporary voice channel");
 		}
