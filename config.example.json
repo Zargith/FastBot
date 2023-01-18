@@ -1,4 +1,4 @@
 {
 	"token": "bot token",
-	"refChannelId": "speech channel id"
+	"refChannelId": "voice channel id"
 }
