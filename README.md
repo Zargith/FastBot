@@ -15,6 +15,12 @@ Then fill the config.json file with your bot token and the channel id you want t
 node bot.js
 ```
 
+or
+
+``` bash
+npm start
+```
+
 or use pm2 to keep the bot running :
 
 ``` bash
