@@ -1,4 +1,5 @@
 {
 	"token": "bot token",
-	"refChannelId": "voice channel id"
+	"refChannelId": "voice channel id",
+	"channelNamePrefix": "the prefix of the voice channel that will be created. ex: 'Channel of '"
 }
